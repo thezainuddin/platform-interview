@@ -41,7 +41,6 @@ The project structure is as follows:
 ```
 1. Refactoring the Terraform code found in the [tf](./tf) directory is the primary focus of this test.
 1. `Vagrantfile`, `run.sh` and `docker-compose.yml` are used to bootstrap this sample application; refactoring these files is not part of the test, but these files may be modified if your solution requires it.
-1. `form3.crt` is used to ease sandboxed running of the submission by Form3 staff and can be ignored.
 1. The `services` code is used to simulate a microservices architecture that connects to vault to retrieve database credentials. The code and method of connecting to vault can be ignored for the purposes of this test.
 
 ## Using an M1 Mac?
@@ -105,8 +104,8 @@ We would like you to complete the following tasks:
 ## 📝 Candidate instructions
 1. Create a private [GitHub](https://help.github.com/en/articles/create-a-repo) repository containing the content of this repository
 2. Complete the [Task](#task) :tada:
-3. [Invite](https://help.github.com/en/articles/inviting-collaborators-to-a-personal-repository) [@form3tech-interviewer-1](https://github.com/form3tech-interviewer-1) to your private repo
-4. Let us know you've completed the exercise using the link provided at the bottom of the email from our recruitment team
+3. [Invite](https://help.github.com/en/articles/inviting-collaborators-to-a-personal-repository) me to your private repo
+4. Let me know you've completed the exercise
 
 
 ## Submission Guidance
