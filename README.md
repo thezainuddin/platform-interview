@@ -1,6 +1,6 @@
-# Form3 Platform Interview
+# Platform Interview
 
-Platform engineers at Form3 build highly available distributed systems using infrastructure as code. Our take home test is designed to evaluate real world activities that are involved with this role. We recognise that this may not be as mentally challenging and may take longer to implement than some algorithmic tests that are often seen in interview exercises. Our approach however helps ensure that you will be working with a team of engineers with the necessary practical skills for the role (as well as a diverse range of technical wizardry).
+Platform engineers build highly available distributed systems using infrastructure as code. Our take home test is designed to evaluate real world activities that are involved with this role. We recognise that this may not be as mentally challenging and may take longer to implement than some algorithmic tests that are often seen in interview exercises. Our approach however helps ensure that you will be working with a team of engineers with the necessary practical skills for the role (as well as a diverse range of technical wizardry).
 
 
 ## 🧪 Sample application
@@ -29,7 +29,6 @@ The project structure is as follows:
 ```
 .
 ├── docker-compose.yml
-├── form3.crt
 ├── README.md
 ├── run.sh
 ├── Vagrantfile
