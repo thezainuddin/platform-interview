@@ -118,5 +118,3 @@ We would like you to complete the following tasks:
 - 🚨 All environments (including staging) should be created when you run `vagrant up` and the apps should print `service started` and the secret data in their logs 🚨
 - Structure your code in a way that allows engineers to run different versions of services in different environments
 
-### Should Nots
-- Use tools that extend Terraform such as Terragrunt
