@@ -37,8 +37,8 @@ Vagrant.configure("2") do |config|
   SCRIPT
 
   config.vm.provision :docker
-  config.vm.define "f3-interview"
-  config.vm.hostname = "f3-interview"
+  config.vm.define "interview"
+  config.vm.hostname = "interview"
   config.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__exclude: ".git/"
 
   config.vm.provision :shell,
