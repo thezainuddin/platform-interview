@@ -1,3 +1,4 @@
+  env = "development"
   vault_address = "http://localhost:8201"
   vault_token   = "f23612cf-824d-4206-9e94-e31a6dc8ee8d"
   account_db_pw = "965d3c27-9e20-4d41-91c9-61e6631870e7"

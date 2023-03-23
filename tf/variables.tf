@@ -1,3 +1,4 @@
+variable "env" {}
 variable "vault_address" {}
 variable "vault_token" {}
 variable "account_db_pw" {}

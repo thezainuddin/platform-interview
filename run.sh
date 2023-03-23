@@ -28,7 +28,7 @@ popd
 echo Applying terraform script
 pushd /vagrant/tf
 terraform workspace new development
-terraform init -upgrade
+terraform init -upgrade 
 terraform apply -auto-approve
 terraform workspace new production
 terraform init -upgrade
