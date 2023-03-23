@@ -33,4 +33,7 @@ terraform apply -auto-approve -var-file=development.tfvars
 terraform workspace new production
 terraform init -upgrade -var-file=production.tfvars
 terraform apply -auto-approve -var-file=production.tfvars
+terraform workspace new staging
+terraform init -upgrade -var-file=staging.tfvars
+terraform apply -auto-approve -var-file=staging.tfvars
 popd
