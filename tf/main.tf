@@ -171,26 +171,6 @@ resource "docker_container" "account" {
   }
 }
 
-resource "docker_container" "gateway" {
-  image = "form3tech-oss/platformtest-gateway"
-  name  = "gateway_${var.env}"
-
-  env = [
-    "VAULT_ADDR=http://vault-${var.env}:8200",
-    "VAULT_USERNAME=gateway-${var.env}",
-    "VAULT_PASSWORD=123-gateway-${var.env}",
-    "ENVIRONMENT=${var.env}"
-  ]
-
-  networks_advanced {
-    name = "vagrant_${var.env}"
-  }
-
-  lifecycle {
-    ignore_changes = all
-  }
-}
-
 resource "docker_container" "payment" {
   image = "form3tech-oss/platformtest-payment"
   name  = "payment_${var.env}"
@@ -199,44 +179,6 @@ resource "docker_container" "payment" {
     "VAULT_ADDR=http://vault-${var.env}:8200",
     "VAULT_USERNAME=payment-${var.env}",
     "VAULT_PASSWORD=123-payment-${var.env}",
-    "ENVIRONMENT=${var.env}"
-  ]
-
-  networks_advanced {
-    name = "vagrant_${var.env}"
-  }
-
-  lifecycle {
-    ignore_changes = all
-  }
-}
-
-resource "docker_container" "frontend" {
-  image = "docker.io/nginx:1.22.0-alpine"
-  name  = "frontend_${var.env}"
-
-  ports {
-    internal = 80
-    external = 4081
-  }
-
-  networks_advanced {
-    name = "vagrant_${var.env}"
-  }
-
-  lifecycle {
-    ignore_changes = all
-  }
-}
-
-resource "docker_container" "account" {
-  image = "form3tech-oss/platformtest-account"
-  name  = "account_${var.env}"
-
-  env = [
-    "VAULT_ADDR=http://vault-${var.env}:8200",
-    "VAULT_USERNAME=account-${var.env}",
-    "VAULT_PASSWORD=123-account-${var.env}",
     "ENVIRONMENT=${var.env}"
   ]
 
@@ -269,33 +211,13 @@ resource "docker_container" "gateway" {
   }
 }
 
-resource "docker_container" "payment" {
-  image = "form3tech-oss/platformtest-payment"
-  name  = "payment_${var.env}"
-
-  env = [
-    "VAULT_ADDR=http://vault-${var.env}:8200",
-    "VAULT_USERNAME=payment-${var.env}",
-    "VAULT_PASSWORD=123-payment-${var.env}",
-    "ENVIRONMENT=${var.env}"
-  ]
-
-  networks_advanced {
-    name = "vagrant_${var.env}"
-  }
-
-  lifecycle {
-    ignore_changes = all
-  }
-}
-
 resource "docker_container" "frontend" {
-  image = "docker.io/nginx:latest"
+  image = var.nginx_img
   name  = "frontend_${var.env}"
 
   ports {
     internal = 80
-    external = 4080
+    external = var.nginx_port
   }
 
   networks_advanced {
