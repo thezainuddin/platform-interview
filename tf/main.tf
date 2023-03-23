@@ -40,7 +40,7 @@ resource "vault_generic_secret" "account" {
   data_json = <<EOT
 {
   "db_user":   "account",
-  "db_password": ${var.account_db_pw}
+  "db_password": "${var.account_db_pw}"
 }
 EOT
 }
@@ -79,7 +79,7 @@ resource "vault_generic_secret" "gateway" {
   data_json = <<EOT
 {
   "db_user":   "gateway",
-  "db_password": ${var.gateway_db_pw}
+  "db_password": "${var.gateway_db_pw}"
 }
 EOT
 }
@@ -117,7 +117,7 @@ resource "vault_generic_secret" "payment" {
   data_json = <<EOT
 {
   "db_user":   "payment",
-  "db_password": ${var.payment_db_pw}
+  "db_password": "${var.payment_db_pw}"
 }
 EOT
 }
