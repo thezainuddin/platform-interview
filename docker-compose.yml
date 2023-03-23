@@ -32,6 +32,6 @@ services:
     cap_add:
       - IPC_LOCK
     ports:
-      - "8401:8200"
+      - "8202:8200"
     environment:
       - VAULT_DEV_ROOT_TOKEN_ID=083672fc-4271-4ed4-9b59-a285xy63a973
