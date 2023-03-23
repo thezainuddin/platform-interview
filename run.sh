@@ -27,6 +27,13 @@ docker-compose up -d
 popd
 echo Applying terraform script
 pushd /vagrant/tf
-terraform init -upgrade
-terraform apply -auto-approve
+terraform workspace new development
+terraform init -upgrade -var-file=development.tfvars
+terraform apply -auto-approve -var-file=development.tfvars
+terraform workspace new production
+terraform init -upgrade -var-file=production.tfvars
+terraform apply -auto-approve -var-file=production.tfvars
+terraform workspace new staging
+terraform init -upgrade -var-file=staging.tfvars
+terraform apply -auto-approve -var-file=staging.tfvars
 popd

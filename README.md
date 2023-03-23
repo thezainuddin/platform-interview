@@ -118,3 +118,18 @@ We would like you to complete the following tasks:
 - 🚨 All environments (including staging) should be created when you run `vagrant up` and the apps should print `service started` and the secret data in their logs 🚨
 - Structure your code in a way that allows engineers to run different versions of services in different environments
 
+
+
+ - Your design decisions, if you are new to Terraform let us know:
+
+ * There are couple of different ways to improve this script. Workspace have some limitations but it was quick to implement for me due to my busy schedule. I could also do multiple environment setup with terragrunt. 
+
+ 
+- How your code would fit into a CI/CD pipeline
+
+* It is very easy to integrate my code to CI/CD such as github actions. My strategy would be create separate workflows for each of the environments. For example three different ec2 instances for these environments. Runner will still need to have workspaces but ec2 instance will be running these environments independantly. 
+
+- Anything beyond the scope of this task that you would consider when running this code in a real production environment
+
+* Yes we can do several improvements in this code, specially related to token storage and security. We should use github-secrets, aws secret manager or other tools to secure these tokens and db passwords. We should also setup a backend to store our statefile for example s3 bucket.
+
